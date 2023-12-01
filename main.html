@@ -10,6 +10,21 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			 // Check if arr is empty or has only 1 element
+    if (arr.length < 2) {
+        return -Infinity;
+    }
+
+    // Remove duplicates and sort the array in descending order
+    const sortedUniqueArr = [...new Set(arr)].sort((a, b) => b - a);
+
+    // Check if all elements are the same
+    if (sortedUniqueArr[0] === sortedUniqueArr[1]) {
+        return -Infinity;
+    }
+
+    // Return the second-highest element
+    return sortedUniqueArr[1];
 			
 		}
 
