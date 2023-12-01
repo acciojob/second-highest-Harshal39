@@ -19,7 +19,7 @@
     const sortedUniqueArr = [...new Set(arr)].sort((a, b) => b - a);
 
     // Check if all elements are the same
-    if (sortedUniqueArr[0] === sortedUniqueArr[1]) {
+     if (sortedUniqueArr.every(element => element === sortedUniqueArr[0])) {
         return -Infinity;
     }
 
